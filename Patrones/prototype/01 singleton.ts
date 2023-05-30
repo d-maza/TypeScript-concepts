@@ -3,12 +3,12 @@
   * con diferentes tipos serán clonados.
   */
 class Prototype {
-    
+
     public primitive: any;
-    public component: object={};
+    public component: object = {};
     public circularReference: ComponentWithBackReference | undefined;
 
-   
+
 
     public clone(): this {
         const clone = Object.create(this);
@@ -16,9 +16,9 @@ class Prototype {
         clone.component = Object.create(this.component);
 
         // Clonar un objeto que tiene un objeto anidado con referencia inversa
-         // requiere un tratamiento especial. Una vez finalizada la clonación, el
-         // el objeto anidado debe apuntar al objeto clonado, en lugar del
-         // objeto original. El operador de propagación puede ser útil para este caso.
+        // requiere un tratamiento especial. Una vez finalizada la clonación, el
+        // el objeto anidado debe apuntar al objeto clonado, en lugar del
+        // objeto original. El operador de propagación puede ser útil para este caso.
 
         clone.circularReference = {
             ...this.circularReference,
@@ -40,7 +40,7 @@ class ComponentWithBackReference {
 /**
  * The client code.
  */
-function clientCode() {
+export function clientCode() {
     const p1 = new Prototype();
     p1.primitive = 245;
     p1.component = new Date();

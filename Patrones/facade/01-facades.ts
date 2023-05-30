@@ -3,7 +3,7 @@ class Facade {
 
     protected subsystem2: Subsystem2;
 
-  
+
     constructor(subsystem1?: Subsystem1, subsystem2?: Subsystem2) {
         this.subsystem1 = subsystem1 || new Subsystem1();
         this.subsystem2 = subsystem2 || new Subsystem2();
@@ -48,7 +48,7 @@ class Subsystem2 {
     }
 }
 
-function clientCode(facade: Facade) {
+export function clientCode(facade: Facade) {
     // ...
 
     console.log(facade.operation());
