@@ -4,6 +4,7 @@ import express from 'express';
 
 const app = express()
 
+
 class useExpress {
 
    router(uri: string,send:string) {

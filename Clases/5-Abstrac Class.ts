@@ -5,6 +5,7 @@ abstract class Mee {
     }
 }
 
+
 abstract class Mee2 {
     name: string
     constructor(){
@@ -32,3 +33,6 @@ class Mee4 implements Mee , Mee2  {
 
 const newMee5 = new Mee5
 newMee5.sayThis()
+
+
+

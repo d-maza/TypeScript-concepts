@@ -1,3 +1,6 @@
+'use strict'
+
+
 function isPrime(n) 
 {
     if (n<=1) return false;
@@ -8,6 +11,7 @@ function isPrime(n)
 
 console.log(isPrime(70));
 console.log(isPrime(23));
+
 
 
 function isPrime1(n) 
@@ -22,11 +26,8 @@ console.log(isPrime1(70));
 console.log(isPrime1(23));
 
 
-/**
- * Determinar si número es primo en JavaScript
- * 
- * https://parzibyte.me/blog
- */
+
+
 const esPrimo2 = numero => {
 	// Casos especiales
 	if (numero == 0 || numero == 1 || numero == 4) return false;
