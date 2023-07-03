@@ -12,13 +12,19 @@ class useExpress {
         res.send(send)
       })
   }
+
+  get(uri : string) {
+    app.get(uri, function (req ,res){
+      res.send('Enviado por metodo get')
+    })
+  }
 }
 
 const useApp = new useExpress()
 
 useApp.router('/','Lo has conseguido')
 useApp.router('/David','Seras un gran Developer')
-
+useApp.get('/get')
 const port = 3000
 
 app.listen(port, () => {
